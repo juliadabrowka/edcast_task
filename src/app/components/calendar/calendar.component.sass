@@ -1,0 +1,76 @@
+.calendar
+    flex-direction: row
+    width: 620px
+    height: 335px
+    border: 1px solid #9c9db5
+    border-radius: 4px
+
+.calendar, .month, .arrows, .together-arrows
+    display: flex
+
+.calendar, .month
+    background-color: #ffffff
+
+ul
+    list-style-type: none
+
+.month, .arrows
+    width: 300px
+
+.month, .arrows
+    align-items: center
+
+.arrows
+    margin: 20px 0px
+
+.left
+    transform: rotate(-180deg)
+
+.right, .left
+    width: 20px 
+    height: 20px
+    fill: #737394
+
+.month .prev, .month .next 
+    width: 20px
+    height: 20px
+    fill: #737394
+
+.weekdays
+    margin-bottom: 15px
+    
+
+.weekdays, .days
+    padding: 10px 0
+    font-size: 16px
+
+.weekdays li
+    width: 39px
+    height: 22px
+    color: #737394
+    text-decoration: none solid rgb(115, 115, 148)
+    text-align: center
+
+.weekdays li, .days li
+    display: inline-block
+
+
+.days
+    padding: 10px 0
+    background: white
+    margin: 0
+
+
+.days li
+    list-style-type: none
+    margin: 5px 15px
+    color: #394042
+    text-decoration: none solid rgb(57, 64, 66)
+    text-align: right
+
+.active
+    width: 33px
+    height: 33px
+    border: 2px solid #38b6a0
+    border-radius: 50%
+    padding: 3px

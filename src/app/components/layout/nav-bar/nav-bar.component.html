@@ -1,0 +1,35 @@
+<div class="all-upper-bar-content">
+    <img class="logo" src="/../../../../assets/images/EdCast-Marketplace-Logo-color.svg" alt="">
+    <div class="right-part-bar">
+            <div class="catalog">
+                <img class="books" src="../../../../assets/images/books.svg" alt="">
+                <div class="catalog-text">Catalog</div>
+                <img class="down-arrow" src="../../../../assets/images/angle-down-arrow.svg" alt="">
+            </div>
+            <div>
+                <input nz-input placeholder="What are you looking for...">
+                <div class="input-box">
+                    <nz-select ngModel="All">
+                        <nz-option nzValue="All" nzLabel="All"></nz-option>
+                        <nz-option nzValue="Instructors" nzLabel="Instructors"></nz-option>
+                        <nz-option nzValue="Courses" nzLabel="Courses"></nz-option>
+                    </nz-select>
+                    <img class="search" src="../../../../assets/images/Icon 2.svg" alt="">
+                </div>
+            </div>
+            <div class="sellers-feed" (mouseover)="changeImage=true" (mouseout)="changeImage=false">
+                <img *ngIf="!changeImage" src="../../../../assets/images/sellers-feed.svg" alt="">
+                <img *ngIf="changeImage" src="../../../../assets/images/sellers-feed-color.svg" alt="">
+            </div>
+            <img class="line" src="../../../../assets/images/Line 34.svg" alt="">
+            <div>
+                <img class="message" src="../../../../assets/images/comment-alt-lines.svg" alt="">
+                <img src="" alt="">
+                <span class="orange-circle"></span></div>
+            <div (mouseover)="changeImage2=true" (mouseout)="changeImage2=false">
+                <img *ngIf="!changeImage2" class="bell" src="../../../../assets/images/bell.svg" alt=""><span class="orange-circle"></span>
+                <img *ngIf="changeImage2" class="bell" src="../../../../assets/images/bell-color.svg" alt=""><span class="orange-circle"></span>
+            </div>
+            <img class="avatar" src="../../../../assets/images/circle-7.png" alt="">
+    </div>
+</div>

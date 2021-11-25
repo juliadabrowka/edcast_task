@@ -1,0 +1,123 @@
+<div class="main-container" *ngIf="!showRequest">
+    <div class="request-quote-container">
+        <div class="content-container">
+            <div class="request-quote-title">Request Quote</div>
+                <img (click)="closeComponent()" class="times" src="../../../../assets/images/times.svg" alt="">
+
+            <app-instructor-info 
+                itemTitle="Quote Request Name"
+                itemDescription="Please, provide a name for this quote request. This will only be visible for you and used as an identifier for any future uses of this quote request."
+                itemOptionalText="*">
+            </app-instructor-info>
+                <input class="enter-data">
+
+            <app-instructor-info
+                itemTitle="Course Period"
+                itemDescription="Please indicate the period in which you would like the course to take place. This will help the course provider when replying to your request."
+                itemOptionalText="*">
+            </app-instructor-info>
+                <div class="course-period-calendar">Start Date     ~     End Date
+                    <img src="../../../../assets/images/calendar.svg" alt="" class="calendar-pic">
+                </div>
+
+            <app-instructor-info
+                itemTitle="Number of Learners"
+                itemDescription="Please indicate your expected number of learners."
+                itemOptionalText="*">
+            </app-instructor-info>
+            <div class="input-learners">
+                <input class="num-box" type="number" [(ngModel)]="value" (ngModelChange)="setValue($event)">
+                <div class="arrows">
+                    <img (click)="increment()" class="arrow" src="../../../../assets/images/angle-up-arrow.svg" alt="">
+                    <img (click)="decrement()" class="arrow" src="../../../../assets/images/angle-down-arrow.svg" alt="">
+                </div>
+            </div>
+            
+
+            <app-instructor-info
+                itemTitle="Delivery"
+                itemDescription="In which format would you wish this course to be delivered?"
+                itemOptionalText="*">
+            </app-instructor-info>
+            <div class="radio-check">
+                <nz-radio-group [(ngModel)]="radioValue">
+                    <label nz-radio nzValue="A">Virtual (VILT)</label>
+                    <label nz-radio nzValue="B">Classroom (ILT)</label>
+                    <div *ngIf="radioValue === 'B'" class="delivery-loc">
+                        <app-instructor-info
+                            itemTitle="Delivery Location"
+                            itemDescription="Please, specify the country and city in which the course should be delivered. The full address will be provided by the responsible for the Venue Preparation after reaching an agreement.">
+                        </app-instructor-info>
+                        <select class="country-select">
+                            <option value="Select a country (click or type to search)">Select a country (click or type to earch)</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Country #2">Country #2</option>
+                        </select>
+                        <app-instructor-info itemTitle="City"></app-instructor-info>
+                        <input class="city-input" placeholder="Specify city..." type="text">
+                    </div>
+                  </nz-radio-group>
+            </div>
+
+            <app-instructor-info
+                itemTitle="Delivery Timezone"
+                itemDescription="Please indicate the timezone in which you wish the course to be delivered. If an agreement is reached, you will be asked to provide a conferencing link to be used by your learners."
+                itemOptionalText="*">
+            </app-instructor-info>
+            <select class="timezone-select">
+                <option value="Select a timezone (click or type to search)">Select a timezone (click or type to earch)</option>
+                <option value="Timezone #1">Timezone #1</option>
+                <option value="Timezone #2">Timezone #2</option>
+            </select>
+
+            <app-instructor-info
+                itemTitle="Venue Preparation"
+                itemDescription="Who should be the resposible to take care of the course venue's logistics?"
+                itemOptionalText="*">
+            </app-instructor-info>
+            <nz-radio-group [(ngModel)]="radioValue2">
+                <label nz-radio nzValue="1">My company will prepare and organize the venue to host this course</label>
+                <label nz-radio nzValue="2">I expect the course supplier to prepare and organize the venue for this course</label>
+            </nz-radio-group>
+
+
+            <app-instructor-info
+                itemTitle="Delivery Language"
+                itemDescription="Please select the language in which you wish this course to be delivered. Please note that this option has no effect over the course materials language."
+                itemOptionalText="*">
+            </app-instructor-info>
+            <select class="language-select">
+                <option value="Select a language">Select a language</option>
+                <option value="Language #1">Language #1</option>
+                <option value="Language #2">Language #2</option>
+            </select>
+
+            <app-instructor-info
+                itemTitle="T&E Budget"
+                itemDescription="Provide an estimation of how much you are willing to pay for this course's Travel & Expenses costs. Please take into account the delivery location and the expected dates for the course."
+                itemOptionalText="Optional">
+            </app-instructor-info>
+
+            <app-instructor-info
+                itemTitle="T&E Payment Criteria"
+                itemDescription="How do you wish to settle the Travel and Expenses payment?"
+                itemOptionalText="*">
+            </app-instructor-info>
+
+            <app-instructor-info
+                itemTitle="Comments"
+                itemDescription="Use this field if you wish to provide more information about your request."
+                itemOptionalText="Optional">
+            </app-instructor-info>
+            <div class="under-text">
+                <textarea class="enter-data"></textarea>
+                <div class="text-counter"> 0/1500 Left</div>
+            </div>
+
+            <div class="buttons">
+                <app-button text="Cancel" (click)="closeComponent()"></app-button>
+                <app-button text="Submit" (click)="closeComponent()"></app-button>
+            </div>
+        </div>
+    </div>
+</div>

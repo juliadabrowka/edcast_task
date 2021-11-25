@@ -1,0 +1,53 @@
+<div class="all" *ngIf="showReq; else request">
+    <div class="instructor-container" *ngFor="let instructor of instructorsList" [routerLink]="['instructor-about', instructor.name]">
+    <div class="instructor-info">
+        <div class="image-column">
+            <img class="instructor-img" [src]="instructor.picture" alt="">      
+        </div>
+    <div class="info">
+        <div class="name">{{ instructor.name }}</div>
+        <div class="company-line">{{instructor.company}}</div>
+                    <div class="rating-info">
+                        <div class="upper-part">
+                            <div class="star-align">
+                                <img src="../../../../assets/images/star-full.svg" alt="" class="star">
+                                <div class="star-rating">4.6/5</div>
+                            </div>
+                            <div class="bottom-part">Rating (15 Reviews)</div>
+                        </div>
+                            <div class="deliveries">
+                                <div class="upper-part">5&#60;</div>
+                                <div class="bottom-part">Deliveries</div>
+                            </div>
+                            <div class="start-rate">
+                        <div class="upper-part">$ 112</div>
+                    <div class="bottom-part">Start Rate</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-info">
+        <div class="city">
+            <img src="../../../../assets/images/map-marker-alt.svg" alt="" class="location-img">
+            {{ instructor.city }}
+        </div>
+            <div class="languages-part">
+                <img src="../../../../assets/images/comment-dots.svg" alt="" class="languages-img">
+                <div class="languages">English, Russian, French</div>
+            </div>
+        <div class="skills-part">
+            <div class="skill">Agile</div>
+                <div class="skill">Scrum</div>
+                    <div class="skill">App Development</div>
+                    <div class="skill">Big Data</div>
+                <div class="skill">Analytics</div>
+            <div class="other">See More...</div>
+        </div>
+    </div>
+    <app-button text="Request a Quote" (click)="quoteRequest()"></app-button>
+    </div>
+</div>
+<ng-template #request>
+    <app-request-quote [showRequest]="showReq"></app-request-quote>
+</ng-template>
+

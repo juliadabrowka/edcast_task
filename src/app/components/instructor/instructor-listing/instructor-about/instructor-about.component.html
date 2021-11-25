@@ -1,0 +1,118 @@
+<div class="container">
+    <div class="go-back" routerLink=''>
+        <img src="../../../../assets/images/angle-left.svg" alt=""> Back</div>
+    <app-instructor-details-box></app-instructor-details-box>
+    <div class="content-container">
+        <app-instructor-info
+            itemTitle="About"></app-instructor-info>
+        <div>
+            <div class="about-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.</div>
+                <li>Lorem ipsum dolor sit amet,</li>
+                <li>consectetur adipiscing elit.</li>
+                <li>Aliquam at porttitor sem.  </li>
+                <li>Aliquam erat volutpat.</li>
+            <div class="about-sum">Donec placerat nisl magna, et faucibus arcu condimentum sed.</div>
+        </div>
+    </div>
+    <div class="content-container">
+        <app-instructor-info
+            itemTitle="Programs/Courses"
+            itemDescription="By listing your Programs/Courses you significantly increase the chance to get invited for assignment."></app-instructor-info>
+        <app-program-name
+            programTitle="Program Name 1"
+            programPrice="$550"></app-program-name>
+        <app-program-name
+            programTitle="Program Name 2"
+            programPrice="$230"
+            greyedText="Acredited by: "
+            blackText="Someone"
+            to="To: "
+            from="From: "
+            fromDate="DD/MM/YYYY"
+            toDate="DD/MM/YYYY"
+            programDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.">
+            <ng-container>
+                <img class="illustration" src="../../../../assets/images/box-22.png" alt="">
+            </ng-container>
+        </app-program-name>
+    </div>
+    <div class="content-container">
+            <app-instructor-info
+                itemTitle="Keywords"></app-instructor-info>
+            <div class="keywords-container">
+                <app-filter-tag
+                    tagContent="Java"></app-filter-tag>
+                <app-filter-tag
+                    tagContent="CSS"></app-filter-tag>
+                <app-filter-tag
+                    tagContent="HTML5"></app-filter-tag>
+                <app-filter-tag
+                    tagContent="JavaScript"></app-filter-tag>
+                <app-filter-tag
+                    tagContent="HTML5"></app-filter-tag>
+                <app-filter-tag
+                    tagContent="CSS"></app-filter-tag>
+                <app-filter-tag
+                    tagContent="JavaScript"></app-filter-tag>
+                <app-filter-tag
+                    tagContent="Git"></app-filter-tag>
+                <app-filter-tag
+                    tagContent="Jenkis"></app-filter-tag>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <app-instructor-info
+            itemTitle="Availability"></app-instructor-info>
+        <app-calendar></app-calendar>
+    </div>
+
+    <div class="content-container">
+        <app-instructor-info
+            itemTitle="Country of residence"></app-instructor-info>
+        <div class="about-content">The Netherlands</div>
+
+        <app-instructor-info
+            itemTitle="Passports & Travel Visas"
+            itemDescription="First Name I. is from *Country and is allowed to travel to the following countries:"></app-instructor-info>
+        <img class="map-pic" src="../../../../assets/images/image.png" alt="">
+    </div>
+
+    <div class="content-container">
+        <app-instructor-info
+            itemTitle="Languages"></app-instructor-info>
+        <div class="languages">
+            <div class="lang">Bulgarian</div>
+            <div class="lang-level">Fluent</div>
+        </div>
+        <div class="languages">
+            <div class="lang">Portuguese</div> 
+            <div class="lang-level">Native</div>
+        </div>
+        <div class="languages">
+            <div class="lang">English</div>
+            <div class="lang-level">Basic</div>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <app-instructor-info
+        itemTitle="Comments"></app-instructor-info>
+        <app-comments
+            name="Oscar Bryant"
+            rating="5.6/10"
+            date="17 May 2021"
+            comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed."></app-comments>
+        <app-comments
+            name="Irene Watson"
+            rating="5.1/10"
+            date="12 Apr 2021"
+            comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat."></app-comments>
+        <app-comments
+            name="Vernon Christensen"
+            rating=".9/10"
+            date="15 Oct 2020"
+            comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed."></app-comments>
+            <div class="more">See More...</div>
+        </div>
+</div>

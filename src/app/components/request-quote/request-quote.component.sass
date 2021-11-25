@@ -1,0 +1,173 @@
+.main-container
+    width: 1280px
+    height: 2879px
+    background-color: rgba(38, 39, 59, 0.8)
+    z-index: 111
+    margin-top: -201px
+    margin-left: -220px
+
+.main-container, .times, .arrows
+    position: absolute
+
+.request-quote-container
+    width: 660px
+    border-radius: 6px
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1)
+    margin: 80px auto auto auto
+
+.content-container
+    padding: 20px 15px
+    position: relative
+
+.request-quote-title
+    width: 600px
+    height: 33px
+    font-size: 24px
+    text-decoration: none solid rgb(38, 39, 59)
+
+.times
+    width: 16px
+    height: 25px
+    right: 15px
+    top: 5px
+
+.enter-data
+    width: 620px
+    height: 38px
+    padding: 0px 12px
+    border-radius: 4px
+
+.enter-data, .course-period-calendar, .num-box, .country-select, .city-input, .language-select, .timezone-select, .enter-data
+    border: 1px solid #9c9db5
+
+.course-period-calendar
+    width: 280px
+    height: 40px
+    padding: 0px 15px 0px 25px
+    border-radius: 4px
+    align-items: center
+    justify-content: space-between
+
+.course-period-calendar, .input-learners, .arrows, nz-radio-group, .under-text, .buttons, .text-counter
+    display: flex
+
+.course-period-calendar, .num-box, .language-select, .text-counter
+    color: #737394
+    text-decoration: none solid rgb(115, 115, 148)
+
+.text-counter, .enter-data, .country-select, .num-box
+    font-size: 14px
+
+.course-period-calendar, .timezone-select, .language-select, .city-input
+    font-size: 16px
+
+.calendar-pic
+    width: 17px
+    height: 20px
+
+.num-box
+    width: 120px
+    height: 40px
+    padding: 0px 12px
+    border-radius: 4px
+    &:hover
+        cursor: pointer
+        border: 1px solid #38b6a0
+
+.num-box, input[type=radio], .city-input, .enter-data, .course-period-calendar, .request-quote-container, .enter-data
+    background-color: #ffffff
+
+.input-learners
+    align-items: flex-end
+    position: relative
+
+.input-learners, .buttons
+    flex-direction: row
+
+.arrows
+    flex-direction: column
+    position: absolute
+    left: 100px
+    z-index: 111
+
+.arrow
+    width: 10px
+    height: 20px
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+input[type=number]
+  -moz-appearance: textfield
+
+nz-radio-group
+    flex-direction: column
+
+input[type=radio]
+    width: 16px
+    height: 16px
+    border: 1px solid #acadc1
+    &:checked
+        width: 16px
+        height: 16px
+        border: 1px solid #38b6a0
+        background-color: #ffffff
+        background-size: cover
+
+.country-select
+    width: 620px
+    height: 40px
+    padding: 0px 0px 0px 12px
+    border-radius: 5px
+
+.city-input
+    width: 300px
+    height: 40px
+    padding: 0px 12px
+    border-radius: 4px
+    margin-top: 10px
+    &:hover
+        cursor: pointer
+    &:active
+        border: 1px solid #6da9ab
+
+.city-input, .timezone-select, .enter-data
+    text-decoration: none solid rgb(38, 39, 59)
+
+.language-select
+    width: 620px
+    height: 40px
+    padding: 0px 0px 0px 12px
+    border-radius: 5px
+
+.timezone-select
+    width: 360px
+    height: 40px
+    padding: 0px 0px 0px 12px
+    border-radius: 5px
+
+.timezone-select, .enter-data, .city-input, .country-select, .request-quote-title
+    color: #26273b
+
+.enter-data
+    width: 620px
+    height: 120px
+    padding: 10px 12px 0px
+    border-radius: 4px
+
+.under-text
+    flex-direction: column
+
+.text-counter
+    width: 620px
+    height: 19px
+    text-align: right
+    justify-content: flex-end
+
+.buttons
+    justify-content: center
+
+app-button
+    margin-right: 20px
